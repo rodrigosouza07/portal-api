@@ -2,34 +2,38 @@ package com.nibsa.portal.bean;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class Aluno {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
+	@Column
 	private Long matricula;
+
+	@Column
 	private String nome;
+
+	@Column
 	private String telefone;
+
+	@Column
 	private String email;
 	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Aluno other = (Aluno) obj;
-		return Objects.equals(id, other.id);
-	}
+
 	public Long getId() {
 		return id;
 	}
@@ -61,5 +65,16 @@ public class Aluno {
 		this.email = email;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(id, other.id);
+	}
 	
 }
