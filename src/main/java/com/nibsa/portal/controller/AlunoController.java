@@ -13,7 +13,7 @@ import com.nibsa.portal.repository.AlunoRepository;
 
 @RestController
 @RequestMapping("aluno")
-public class AlnoController {
+public class AlunoController {
 	
 	@Autowired
 	AlunoRepository alunoRepository;
