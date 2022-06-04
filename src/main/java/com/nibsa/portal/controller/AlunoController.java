@@ -27,4 +27,5 @@ public class AlunoController {
 	public Aluno save(Aluno aluno){
 		return alunoRepository.save(aluno);
 	}
+	
 }

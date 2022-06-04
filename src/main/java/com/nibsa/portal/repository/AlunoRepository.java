@@ -7,5 +7,5 @@ import com.nibsa.portal.bean.Aluno;
 
 @Repository
 public interface AlunoRepository extends JpaRepository<Aluno, Long>{
-
+    
 }
