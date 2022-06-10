@@ -26,6 +26,7 @@ public class AlunoController {
 	@PostMapping
 	public Aluno save(Aluno aluno){
 		return alunoRepository.save(aluno);
+		
 	}
 	
 }
